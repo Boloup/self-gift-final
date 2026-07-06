@@ -1,0 +1,675 @@
+:root {
+  --page-bg: #070024;
+  --nav-bg: #4b13b8;
+  --card-fill: rgba(24, 14, 78, 0.78);
+  --card-line: rgba(130, 84, 255, 0.78);
+  --text: #fbf7ff;
+  --muted: #ded6f3;
+  --cyan: #33cfff;
+  --blue: #35a8ff;
+  --violet: #8a43ff;
+  --gold: #ffd460;
+  --deep: #0a0330;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #02000c;
+  color: var(--text);
+  font-family: "Montserrat", Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font: inherit;
+}
+
+svg {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.page-shell {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(84, 40, 255, 0.38), transparent 33%),
+    radial-gradient(circle at 45% 70%, rgba(47, 190, 255, 0.16), transparent 27%),
+    linear-gradient(180deg, #09002d 0%, #060023 55%, #070026 100%);
+}
+
+.top-safe-nav {
+  height: 84px;
+  padding: 27px 24px 14px;
+  background: linear-gradient(90deg, #5115c3 0%, #4410b0 54%, #4b13b8 100%);
+}
+
+.back-button {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  color: #fff;
+  background: transparent;
+  border: 0;
+}
+
+.back-button svg {
+  width: 34px;
+  height: 34px;
+  stroke-width: 3;
+}
+
+.hero-section {
+  position: relative;
+  padding-bottom: 7px;
+}
+
+.hero-art {
+  position: relative;
+  height: clamp(246px, 66.4vw, 286px);
+  overflow: hidden;
+  background: #070024;
+}
+
+.hero-art::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  z-index: 1;
+  height: 54px;
+  background:
+    radial-gradient(ellipse at 50% 10%, rgba(78, 57, 214, 0.26), transparent 58%),
+    linear-gradient(180deg, rgba(7, 0, 36, 0), rgba(7, 0, 36, 0.7) 58%, var(--page-bg) 100%);
+  pointer-events: none;
+}
+
+.hero-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 46%;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 3;
+  margin-top: -10px;
+  padding: 0 29px;
+  text-align: center;
+}
+
+.hero-copy h1 {
+  margin: 0;
+  font-size: clamp(29px, 8.45vw, 36px);
+  line-height: 1.05;
+  font-weight: 900;
+  letter-spacing: 0;
+  color: #fff;
+}
+
+.hero-copy h1 span:first-child {
+  color: transparent;
+  background: linear-gradient(180deg, #43ddff 8%, #1da6ff 86%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: none;
+}
+
+.hero-copy p {
+  max-width: 330px;
+  margin: 8px auto 0;
+  color: var(--muted);
+  font-size: clamp(15px, 4.25vw, 18px);
+  line-height: 1.42;
+  font-weight: 500;
+}
+
+.info-card {
+  position: relative;
+  width: calc(100% - 48px);
+  margin: 11px auto 0;
+  border: 1px solid var(--card-line);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 13% 12%, rgba(138, 67, 255, 0.26), transparent 38%),
+    linear-gradient(180deg, rgba(27, 15, 86, 0.83), rgba(15, 10, 55, 0.8));
+  box-shadow:
+    inset 0 0 24px rgba(89, 57, 207, 0.23),
+    0 0 16px rgba(84, 55, 201, 0.16);
+}
+
+.card-heading {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 12px;
+  padding: 20px 20px 0;
+}
+
+.info-card h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(21px, 5.6vw, 25px);
+  line-height: 1.16;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.info-card p {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: clamp(14px, 3.95vw, 17px);
+  line-height: 1.38;
+  font-weight: 500;
+}
+
+.round-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #d9cbff;
+  background: radial-gradient(circle at 45% 35%, #8b58ff, #4f25be 72%);
+  box-shadow: 0 0 18px rgba(128, 74, 255, 0.55), inset 0 0 16px rgba(255, 255, 255, 0.15);
+}
+
+.round-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke-width: 2.4;
+}
+
+.gift-icon svg,
+.flow-icon.gift svg {
+  color: #ffcf54;
+}
+
+.shield-icon svg,
+.info-icon svg,
+.notice-icon svg {
+  color: #f2edff;
+}
+
+.mini-flow {
+  display: grid;
+  grid-template-columns: 1fr 16px 1fr 16px 1fr;
+  align-items: start;
+  gap: 6px;
+  padding: 17px 17px 17px;
+  text-align: center;
+}
+
+.mini-flow article {
+  min-width: 0;
+}
+
+.flow-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: rgba(12, 43, 108, 0.75);
+  box-shadow: inset 0 0 14px rgba(63, 201, 255, 0.26), 0 0 12px rgba(52, 195, 255, 0.35);
+}
+
+.flow-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 2.2;
+}
+
+.flow-icon.mic,
+.flow-icon.user {
+  color: #55ddff;
+  border: 1px solid #42d8ff;
+}
+
+.flow-icon.gift {
+  border: 1px solid #ffe15e;
+  background: rgba(62, 41, 70, 0.78);
+}
+
+.flow-chevron {
+  margin-top: 29px;
+  color: #a875ff;
+  font-size: 42px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.mini-flow h3 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(13px, 3.45vw, 15px);
+  line-height: 1.14;
+  font-weight: 800;
+}
+
+.mini-flow p {
+  margin-top: 4px;
+  font-size: clamp(12px, 3.25vw, 14px);
+  line-height: 1.2;
+}
+
+.compact-card {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 16px 20px;
+}
+
+.compact-card p {
+  margin-top: 8px;
+}
+
+.tutorial-card {
+  padding: 15px 12px 16px;
+}
+
+.tutorial-card h2 {
+  padding: 0 0 12px 1px;
+}
+
+.tutorial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.tutorial-step {
+  position: relative;
+  min-width: 0;
+}
+
+.placeholder {
+  height: clamp(135px, 36vw, 158px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 2px dashed rgba(67, 42, 177, 0.92);
+  border-radius: 8px;
+  overflow: hidden;
+  color: #3f389c;
+  background: linear-gradient(135deg, #f0edff 0%, #ded8ff 100%);
+  box-shadow: inset 0 0 18px rgba(92, 57, 202, 0.08);
+}
+
+.placeholder img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+}
+
+.placeholder svg {
+  width: 31px;
+  height: 31px;
+  stroke-width: 1.9;
+}
+
+.placeholder span {
+  color: #332a90;
+  max-width: 82px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.key-step .placeholder {
+  border-color: #5fe8ff;
+  box-shadow: 0 0 0 2px rgba(151, 80, 255, 0.85), 0 0 16px rgba(61, 221, 255, 0.8);
+}
+
+.key-badge {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: -10px;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  padding: 4px 10px;
+  border-radius: 14px;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+  font-weight: 800;
+  background: linear-gradient(180deg, #7d4cff, #4930b6);
+  box-shadow: 0 0 10px rgba(127, 86, 255, 0.75);
+}
+
+.key-badge span {
+  color: var(--gold);
+}
+
+.step-copy {
+  display: grid;
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: 4px;
+  align-items: start;
+  margin-top: 10px;
+}
+
+.step-number {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 900;
+  background: linear-gradient(180deg, #8f4dff, #5530d0);
+  box-shadow: 0 0 10px rgba(130, 73, 255, 0.5);
+}
+
+.step-number.blue {
+  background: linear-gradient(180deg, #4dccff, #2d80ef);
+}
+
+.step-copy h3 {
+  margin: 1px 0 0;
+  color: #fff;
+  font-size: clamp(14px, 3.7vw, 17px);
+  line-height: 1.14;
+  font-weight: 800;
+}
+
+.step-copy p {
+  margin: 5px 0 0;
+  font-size: clamp(12px, 3.35vw, 15px);
+  line-height: 1.28;
+}
+
+.note-card {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@media (max-width: 374px) {
+  .top-safe-nav {
+    height: 78px;
+    padding-left: 20px;
+  }
+
+  .info-card {
+    width: calc(100% - 32px);
+  }
+
+  .card-heading,
+  .compact-card {
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 10px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .round-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .tutorial-card {
+    padding-left: 9px;
+    padding-right: 9px;
+  }
+
+  .tutorial-grid {
+    gap: 6px;
+  }
+
+  .step-copy {
+    grid-template-columns: 30px minmax(0, 1fr);
+  }
+
+  .step-number {
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+  }
+
+}
+
+/* Fidelity pass: the approved mockup is a 2x mobile export, so key geometry is
+   scaled back to CSS pixels while preserving the exact section order. */
+.page-shell {
+  max-width: 423px;
+}
+
+.top-safe-nav {
+  height: 42px;
+  padding: 13px 22px 5px;
+}
+
+.back-button {
+  width: 24px;
+  height: 24px;
+}
+
+.back-button svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 3.4;
+}
+
+.hero-section {
+  padding-bottom: 4px;
+}
+
+.hero-art {
+  height: min(53.4vw, 226px);
+}
+
+.hero-art::after {
+  height: 58px;
+}
+
+.hero-copy {
+  margin-top: -18px;
+  padding: 0 27px;
+}
+
+.hero-copy h1 {
+  font-size: 30px;
+  line-height: 1.05;
+}
+
+.hero-copy p {
+  max-width: 300px;
+  margin-top: 5px;
+  font-size: 13px;
+  line-height: 1.34;
+}
+
+.info-card {
+  width: calc(100% - 51px);
+  margin-top: 6px;
+  border-radius: 8px;
+}
+
+.card-heading {
+  grid-template-columns: 39px minmax(0, 1fr);
+  gap: 9px;
+  padding: 10px 14px 0;
+}
+
+.info-card h2 {
+  font-size: 15px;
+  line-height: 1.08;
+}
+
+.info-card p {
+  margin-top: 5px;
+  font-size: 9.4px;
+  line-height: 1.2;
+}
+
+.round-icon {
+  width: 38px;
+  height: 38px;
+}
+
+.round-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.mini-flow {
+  grid-template-columns: 1fr 12px 1fr 12px 1fr;
+  gap: 4px;
+  padding: 8px 12px 10px;
+}
+
+.flow-icon {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 5px;
+}
+
+.flow-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.flow-chevron {
+  margin-top: 19px;
+  font-size: 24px;
+}
+
+.mini-flow h3 {
+  font-size: 9.5px;
+  line-height: 1.08;
+}
+
+.mini-flow p {
+  margin-top: 3px;
+  font-size: 8.5px;
+  line-height: 1.12;
+}
+
+.compact-card {
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 9px;
+  padding: 7px 14px;
+}
+
+.compact-card p {
+  margin-top: 4px;
+  font-size: 9.2px;
+  line-height: 1.16;
+}
+
+.compact-card .round-icon {
+  width: 34px;
+  height: 34px;
+}
+
+.compact-card .round-icon svg {
+  width: 19px;
+  height: 19px;
+}
+
+.compact-card h2 {
+  font-size: 14.5px;
+}
+
+.tutorial-card {
+  padding: 8px 12px 10px;
+}
+
+.tutorial-card h2 {
+  padding-bottom: 8px;
+}
+
+.tutorial-grid {
+  gap: 9px;
+}
+
+.placeholder {
+  height: min(34vw, 144px);
+  border-radius: 7px;
+}
+
+.placeholder svg {
+  width: 24px;
+  height: 24px;
+}
+
+.placeholder span {
+  max-width: 74px;
+  font-size: 9px;
+}
+
+.key-badge {
+  top: -9px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 9px;
+}
+
+.step-copy {
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 4px;
+  margin-top: 6px;
+}
+
+.step-number {
+  width: 20px;
+  height: 20px;
+  font-size: 11px;
+}
+
+.step-copy h3 {
+  font-size: 10px;
+  line-height: 1.08;
+}
+
+.step-copy p {
+  margin-top: 3px;
+  font-size: 8.8px;
+  line-height: 1.16;
+}
+
+.note-card {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.trade-notice-card {
+  margin-top: 6px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+.trade-notice-card .notice-icon {
+  background: radial-gradient(circle at 45% 35%, #fb7dff, #6427d7 72%);
+}
+
+.page-shell {
+  padding-bottom: calc(8px + env(safe-area-inset-bottom));
+}
