@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Self-Gift is Here</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell" aria-label="Self-Gift guide">
+      <nav class="top-safe-nav" aria-label="Page navigation">
+        <button class="back-button" type="button" aria-label="Back" data-back>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15.5 4 7.5 12l8 8" />
+          </svg>
+        </button>
+      </nav>
+
+      <section class="hero-section" aria-label="Self-Gift voice room preview">
+        <div class="hero-art">
+          <img data-hero-image src="./assets/hero-main.png" alt="" />
+        </div>
+        <div class="hero-copy">
+          <h1><span data-copy="titleAccent">Self-Gift</span><span data-copy="titleRest"> is Here!</span></h1>
+          <p data-copy="subtitle">Take a mic seat, select your own avatar, and send gifts to yourself in the room.</p>
+        </div>
+      </section>
+
+      <section class="info-card what-card">
+        <div class="card-heading">
+          <span class="round-icon gift-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20 12v8H4v-8M3 8h18v4H3zM12 8v12M12 8H7.5a2 2 0 1 1 1.7-3.1L12 8zm0 0h4.5a2 2 0 1 0-1.7-3.1L12 8z" /></svg>
+          </span>
+          <div>
+            <h2 data-copy="whatTitle">What is Self-Gift?</h2>
+            <p data-copy="whatBody">When you are sitting on a mic seat, your own avatar will appear in the gift recipient area. Select your avatar and send a gift just like you would send gifts to others.</p>
+          </div>
+        </div>
+
+        <div class="mini-flow" aria-label="Self-Gift flow">
+          <article>
+            <span class="flow-icon mic">
+              <svg viewBox="0 0 24 24"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3zM5 11v1a7 7 0 0 0 14 0v-1M12 19v3M8 22h8" /></svg>
+            </span>
+            <h3>On Mic</h3>
+            <p>Take a mic seat in the room</p>
+          </article>
+          <span class="flow-chevron" aria-hidden="true">›</span>
+          <article>
+            <span class="flow-icon user">
+              <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM4.5 21a7.5 7.5 0 0 1 15 0" /></svg>
+            </span>
+            <h3>Select Yourself</h3>
+            <p>Choose your own avatar</p>
+          </article>
+          <span class="flow-chevron" aria-hidden="true">›</span>
+          <article>
+            <span class="flow-icon gift">
+              <svg viewBox="0 0 24 24"><path d="M20 12v8H4v-8M3 8h18v4H3zM12 8v12M12 8H7.5a2 2 0 1 1 1.7-3.1L12 8zm0 0h4.5a2 2 0 1 0-1.7-3.1L12 8z" /></svg>
+            </span>
+            <h3>Send Gift</h3>
+            <p>Send a gift to yourself</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="info-card compact-card">
+        <span class="round-icon shield-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3 5 6v5c0 4.4 2.8 8.4 7 10 4.2-1.6 7-5.6 7-10V6l-7-3zM12 8v5M12 16.5v.1" /></svg>
+        </span>
+        <div>
+          <h2 data-copy="requirementTitle">Important Requirement</h2>
+          <p data-copy="requirementBody">You need to be on a mic seat first. Your avatar will appear in the gift recipient list after you take a mic seat.</p>
+        </div>
+      </section>
+
+      <section class="info-card tutorial-card">
+        <h2 data-copy="howTitle">How to Send a Gift to Yourself</h2>
+        <div class="tutorial-grid">
+          <article class="tutorial-step">
+            <div class="placeholder">
+              <img src="./assets/step-1.png" alt="Step 1: take a mic seat" />
+            </div>
+            <div class="step-copy">
+              <span class="step-number">1</span>
+              <div><h3>Take a mic seat</h3><p>Sit on an empty mic seat.</p></div>
+            </div>
+          </article>
+          <article class="tutorial-step key-step">
+            <div class="key-badge"><span aria-hidden="true">★</span> Key step</div>
+            <div class="placeholder">
+              <img src="./assets/step-2.png" alt="Step 2: select your avatar" />
+            </div>
+            <div class="step-copy">
+              <span class="step-number blue">2</span>
+              <div><h3>Select your avatar</h3><p>Choose the Me avatar in the gift panel.</p></div>
+            </div>
+          </article>
+          <article class="tutorial-step">
+            <div class="placeholder">
+              <img src="./assets/step-3.png" alt="Step 3: send a gift" />
+            </div>
+            <div class="step-copy">
+              <span class="step-number">3</span>
+              <div><h3>Send a gift</h3><p>Pick a gift and tap Send.</p></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="info-card compact-card note-card">
+        <span class="round-icon info-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 11v6M12 7.2v.1M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z" /></svg>
+        </span>
+        <div>
+          <h2 data-copy="noteTitle">Please Note</h2>
+          <p data-copy="noteBody">Self-gifting uses your gift balance as normal. Please make sure you have enough balance before sending. Gift effects will be displayed in the voice room after sending.</p>
+        </div>
+      </section>
+
+      <section class="info-card compact-card trade-notice-card">
+        <span class="round-icon notice-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 3v3M5 6l2.2 2.2M19 6l-2.2 2.2M7 21h10M8 17h8a5 5 0 0 0 0-10H8a5 5 0 0 0 0 10zM12 10v4" /></svg>
+        </span>
+        <div>
+          <h2 data-copy="tradeNoticeTitle">Trade Function Notice</h2>
+          <p data-copy="tradeNoticeBody">With Self-Gift now available, the in-app Trade function has been discontinued. Agents and coin sellers can contact their admin to apply for Payroll permission.</p>
+        </div>
+      </section>
+
+    </main>
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
